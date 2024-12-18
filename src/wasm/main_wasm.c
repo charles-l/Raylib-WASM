@@ -7,6 +7,7 @@
 #include <emscripten/emscripten.h>
 
 extern void InitWindow(int width, int height, const char *title);
+extern void InitAudioDevice();
 
 extern void game_init();
 extern void game_frame();
@@ -27,6 +28,7 @@ extern void game_frame();
 
 int main(void) {
   InitWindow(WIDTH, HEIGHT, TITLE);
+  InitAudioDevice();
   game_init();
 
   emscripten_set_main_loop(game_frame, 0, 1);
