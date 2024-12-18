@@ -21,7 +21,7 @@ A Template for making Odin, Raylib, and WASM (Emscripten) projects
 1. [emsdk](https://emscripten.org/docs/getting_started/downloads.html)
 
 > [!NOTE]  
-> You need to modify the path to where your `emsdk_env.bat` is located
+> In `build_web.bat`, you need to modify the path to where your `emsdk_env.bat` is located
 
 ```batch
 .\build_web.bat
