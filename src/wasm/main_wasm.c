@@ -1,5 +1,9 @@
 #include <stdlib.h>
 
+// IDK How to build raygui without using the raylib headers...
+#define RAYGUI_IMPLEMENTATION
+#include "raygui.h"
+
 #include <emscripten/emscripten.h>
 
 extern void InitWindow(int width, int height, const char *title);
