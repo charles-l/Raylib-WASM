@@ -22,5 +22,9 @@ wasm_context :: proc "contextless" () -> runtime.Context {
     c: runtime.Context = runtime.default_context()
     c.allocator = rl.MemAllocator()
 
+    // Should we just also make it rl.MemAllocator()??
+    c.temp_allocator.procedure = rl.MemAllocatorProc
+    c.temp_allocator.data = nil
+
     return c
 }
