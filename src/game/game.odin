@@ -16,6 +16,12 @@ init :: proc() {
 
     log.info("Yoo We can do this as well")
     log.warnf("PI: {}", 3.141)
+
+    b, ok := rl.LoadFileDataString("assets/test_file_loading.txt")
+    assert(ok, "Failed to load file")
+    defer delete(b)
+
+    log.infof("Content: %s", b)
 }
 
 frame :: proc() {
