@@ -2,6 +2,8 @@ package game
 
 import rl "../../raylib"
 
+import "core:log"
+
 GameContext :: struct {
     pos: rl.Vector2,
 }
@@ -11,6 +13,9 @@ ctx: GameContext
 init :: proc() {
     rl.SetTargetFPS(144)
     ctx.pos = {100, 100}
+
+    log.info("Yoo We can do this as well")
+    log.warnf("PI: {}", 3.141)
 }
 
 frame :: proc() {
