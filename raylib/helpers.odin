@@ -1,7 +1,6 @@
 package raylib
 
 import "core:strings"
-import "core:mem"
 
 LoadFileDataSlice :: proc(filename: string, allocator := context.allocator) -> (res: []byte, ok: bool) {
     filename_str := strings.clone_to_cstring(filename, context.temp_allocator)

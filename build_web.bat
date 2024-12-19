@@ -6,7 +6,7 @@ set EMSDK_QUIET=1
 call C:\SDKs\emsdk\emsdk_env.bat
 
 pushd build_web
-odin build ..\src\game -target:freestanding_wasm32 -build-mode:obj -show-system-calls
+odin build ..\src\game -target:freestanding_wasm32 -build-mode:obj -show-system-calls -vet -strict-style
 IF %ERRORLEVEL% NEQ 0 exit /b 1
 
 set files=..\src\wasm\main_wasm.c ..\raylib\wasm\libraylib.a game.wasm.o
