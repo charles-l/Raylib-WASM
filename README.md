@@ -33,6 +33,7 @@ python -m http.server
 
 ## Examples
 * [Breakout Clone](https://github.com/Aronicu/Breakout) - [Play it here](https://aronicu.github.io/breakout/)
+* [LDTK Example](https://github.com/Aronicu/LDTK-Example) - [Play it here](https://aronicu.github.io/ldtk-example/)
 
 ## References
 * [Caedo's raylib_wasm_odin](https://github.com/Caedo/raylib_wasm_odin)
