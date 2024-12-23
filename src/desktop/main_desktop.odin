@@ -1,5 +1,7 @@
 package main_desktop
 
+import "core:log"
+
 import rl "../../raylib"
 
 import "../game"
@@ -14,6 +16,14 @@ main :: proc() {
 
     rl.InitAudioDevice()
     defer rl.CloseAudioDevice()
+
+    context.logger = log.create_console_logger(opt = {
+        .Level,
+        .Terminal_Color,
+        .Short_File_Path,
+        .Line,
+    })
+    defer log.destroy_console_logger(context.logger)
 
     game.init()
     defer game.fini()
